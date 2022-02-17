@@ -4,9 +4,128 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>登录注册页面</title>
+    <title>大事件登录/注册</title>
+    <!-- 导入layui的样式表 -->
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+    <!-- 导入自己的样式表 -->
+    <link rel="stylesheet" href="/assets/css/login.css" />
   </head>
   <body>
-      
+    <!-- 头部logo区域 -->
+    <div class="layui-main">
+      <img src="./assets/images/logo.png" alt="" />
+    </div>
+    <!-- 登录注册区域 -->
+    <div class="loginAndRegbox">
+      <div class="title-box"></div>
+
+      <!-- 登录的页面 -->
+      <div class="login-box">
+        <form class="layui-form" action="" id="form-login">
+          <!-- 登录页面用户名 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>
+            <input
+              type="text"
+              name="username"
+              required
+              lay-verify="required|username"
+              placeholder="请输入用户名"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+          <!-- 登录页面密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="password"
+              required
+              lay-verify="required|pass"
+              placeholder="请输入密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+          <!-- 登录提交按钮 -->
+          <div class="layui-form-item layui-btn-normal">
+            <button
+              class="layui-btn layui-btn-fluid layui-btn-normal"
+              id="btn-login"
+              lay-submit
+            >
+              立即登录
+            </button>
+          </div>
+          <div class="layui-form-item" id="linkReg">
+            <a id="link-reg" href="javascript:;">去注册账号</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- 注册页面 -->
+      <div class="reg-box">
+        <form class="layui-form" id="form_reg">
+          <!-- 注册页面用户名 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>
+            <input
+              type="text"
+              name="username"
+              required
+              lay-verify="required|username"
+              placeholder="请输入用户名"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+          <!-- 注册页面密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="password"
+              required
+              lay-verify="required|pass"
+              placeholder="请输入密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+          <!-- 注册页面确认密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="repassword"
+              required
+              lay-verify="required|pass|repwd"
+              placeholder="请再次输入密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+          <!-- 注册提交按钮 -->
+          <div class="layui-form-item" id="btn-reg">
+            <button
+              class="layui-btn layui-btn-fluid layui-btn-normal"
+              lay-submit
+            >
+              立即提交
+            </button>
+          </div>
+          <div class="layui-form-item" id="linkLogin">
+            <a id="link-login" href="javascript:;">去登录</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/js/basAPI.js"></script>
+    <script src="/assets/fonts/iconfont.js"></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>
